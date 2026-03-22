@@ -1,0 +1,408 @@
+/* ================= RESET ================= */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+
+font-family: "Poppins", sans-serif;
+background: linear-gradient(-45deg,#000,#111,#000,#111);
+background-size: 400% 400%;
+animation: gradientBG 10s ease infinite;
+
+color: white;
+
+}
+
+/* ================= GRADIENT ================= */
+
+@keyframes gradientBG {
+
+0% {background-position:0% 50%;}
+50% {background-position:100% 50%;}
+100% {background-position:0% 50%;}
+
+}
+
+/* ================= LOADER ================= */
+
+#loader {
+
+position: fixed;
+width: 100%;
+height: 100%;
+
+background: black;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+z-index: 9999;
+
+}
+
+.spinner {
+
+width: 60px;
+height: 60px;
+
+border: 6px solid #222;
+border-top: 6px solid #FFD700;
+
+border-radius: 50%;
+
+animation: spin 1s linear infinite;
+
+margin-bottom: 20px;
+
+}
+
+@keyframes spin {
+
+to {transform: rotate(360deg);}
+
+}
+
+/* ================= HEADER ================= */
+
+header {
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+padding: 15px 40px;
+
+background: rgba(0,0,0,0.7);
+backdrop-filter: blur(10px);
+
+position: sticky;
+top: 0;
+
+z-index: 1000;
+
+}
+
+.logo {
+
+font-family: "Orbitron";
+font-size: 20px;
+color: #FFD700;
+
+}
+
+nav a {
+
+margin: 0 15px;
+text-decoration: none;
+color: white;
+
+transition: 0.3s;
+
+}
+
+nav a:hover {
+
+color: #FFD700;
+text-shadow: 0 0 10px #FFD700;
+
+}
+
+.discord-btn {
+
+background: #FFD700;
+color: black;
+
+padding: 8px 18px;
+border-radius: 6px;
+
+text-decoration: none;
+
+font-weight: bold;
+
+transition: 0.3s;
+
+}
+
+.discord-btn:hover {
+
+box-shadow: 0 0 15px #FFD700;
+transform: translateY(-2px);
+
+}
+
+/* ================= HERO ================= */
+
+.hero {
+
+height: 100vh;
+
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+
+}
+
+.hero h1 {
+
+font-size: 48px;
+
+font-family: "Orbitron";
+
+color: #FFD700;
+
+margin-bottom: 15px;
+
+}
+
+.hero p {
+
+font-size: 18px;
+
+margin-bottom: 25px;
+
+}
+
+.hero button {
+
+background: #FFD700;
+
+border: none;
+
+padding: 14px 28px;
+
+font-size: 16px;
+
+border-radius: 6px;
+
+cursor: pointer;
+
+transition: 0.3s;
+
+}
+
+.hero button:hover {
+
+box-shadow: 0 0 20px #FFD700;
+transform: translateY(-3px);
+
+}
+
+/* ================= PRODUCTS ================= */
+
+#products {
+
+padding: 80px 40px;
+
+}
+
+.section-title {
+
+text-align: center;
+
+font-size: 32px;
+
+font-family: "Orbitron";
+
+color: #FFD700;
+
+margin-bottom: 50px;
+
+}
+
+/* GRID */
+
+.product-grid {
+
+display: grid;
+
+grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+
+gap: 30px;
+
+}
+
+/* CARD */
+
+.product-card {
+
+background: rgba(0,0,0,0.7);
+
+border-radius: 12px;
+
+padding-bottom: 20px;
+
+transition: 0.3s;
+
+box-shadow: 0 0 10px rgba(255,215,0,0.2);
+
+}
+
+.product-card:hover {
+
+transform: translateY(-8px);
+
+box-shadow: 0 0 20px rgba(255,215,0,0.6);
+
+}
+
+/* IMAGE */
+
+.product-img {
+
+height: 170px;
+
+overflow: hidden;
+
+border-radius: 12px 12px 0 0;
+
+}
+
+.product-img img {
+
+width: 100%;
+height: 100%;
+
+object-fit: cover;
+
+transition: 0.3s;
+
+}
+
+.product-card:hover img {
+
+transform: scale(1.1);
+
+}
+
+/* TEXT */
+
+.product-card h3 {
+
+margin: 15px;
+
+font-size: 18px;
+
+}
+
+.product-card p {
+
+margin: 0 15px 10px;
+
+font-size: 14px;
+
+color: #ccc;
+
+}
+
+.price {
+
+margin: 10px 15px;
+
+color: #FFD700;
+
+font-weight: bold;
+
+}
+
+/* BUTTON */
+
+.product-card button {
+
+margin-left: 15px;
+
+background: #FFD700;
+
+border: none;
+
+padding: 10px 20px;
+
+border-radius: 6px;
+
+cursor: pointer;
+
+transition: 0.3s;
+
+font-weight: bold;
+
+}
+
+.product-card button:hover {
+
+box-shadow: 0 0 20px #FFD700;
+
+}
+
+/* ================= CONTACT ================= */
+
+#contact {
+
+padding: 60px 20px;
+text-align: center;
+
+}
+
+/* ================= TOAST ================= */
+
+#toast {
+
+position: fixed;
+
+bottom: 30px;
+right: 30px;
+
+background: #FFD700;
+color: black;
+
+padding: 12px 20px;
+
+border-radius: 6px;
+
+opacity: 0;
+
+transition: 0.3s;
+
+}
+
+/* ================= ANIMATION ================= */
+
+.fade-in {
+
+opacity: 0;
+transform: translateY(30px);
+
+transition: 0.8s;
+
+}
+
+.fade-in.show {
+
+opacity: 1;
+transform: translateY(0);
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+header {
+
+flex-direction: column;
+gap: 10px;
+
+}
+
+.hero h1 {
+
+font-size: 34px;
+
+}
+
+  }
