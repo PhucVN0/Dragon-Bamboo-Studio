@@ -1,27 +1,28 @@
-/* ================= LOADING ================= */
+/* LOADER */
 
-window.addEventListener("load", () => {
+window.addEventListener("load",()=>{
 
-setTimeout(() => {
+setTimeout(()=>{
 
-document.getElementById("loader").style.display = "none";
+document.getElementById("loader").style.display="none";
 
-}, 1200);
+},1200);
 
 });
 
-/* ================= SCROLL BUTTON ================= */
+/* SCROLL */
 
 function scrollToProducts(){
 
-document.getElementById("products")
+document
+.getElementById("products")
 .scrollIntoView({
 behavior:"smooth"
 });
 
 }
 
-/* ================= BUY FUNCTION ================= */
+/* BUY */
 
 function buyProduct(productName){
 
@@ -29,11 +30,8 @@ showToast();
 
 setTimeout(()=>{
 
-const message =
-`Xin chào, tôi muốn mua ${productName}`;
-
 const discordLink =
-`https://discord.com/users/1379097098900869293`;
+"https://discord.com/users/YOUR_USER_ID";
 
 window.open(discordLink,"_blank");
 
@@ -41,27 +39,27 @@ window.open(discordLink,"_blank");
 
 }
 
-/* ================= TOAST ================= */
+/* TOAST */
 
 function showToast(){
 
 const toast =
 document.getElementById("toast");
 
-toast.style.opacity = "1";
+toast.style.opacity="1";
 
 setTimeout(()=>{
 
-toast.style.opacity = "0";
+toast.style.opacity="0";
 
 },2000);
 
 }
 
-/* ================= SCROLL ANIMATION ================= */
+/* SCROLL ANIMATION */
 
 const observer =
-new IntersectionObserver((entries)=>{
+new IntersectionObserver(entries=>{
 
 entries.forEach(entry=>{
 
